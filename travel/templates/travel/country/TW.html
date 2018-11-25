@@ -1,0 +1,21 @@
+{% extends 'travel/country.html' %}
+{% load static %}
+
+{% block content %}
+
+<h1>{{ country_code }}</h1>
+<p>
+    Spring Break sophomore year.
+    <div class="col-lg-6">
+        <img class="img-fluid" src="{% static 'travel/img/TW.jpg' %}" alt="">
+	</div></br></br>
+    <div class="col-lg-6">
+        <img class="img-fluid" src="{% static 'travel/img/TW_Temple.jpg' %}" alt="">
+	</div></br></br>
+    <div class="col-lg-6">
+        <img class="img-fluid" src="{% static 'travel/img/TW_NightMarket.jpg' %}" alt="">
+	</div></br></br>
+
+</p>
+
+{% endblock %}

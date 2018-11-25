@@ -1,0 +1,14 @@
+{% extends 'travel/country.html' %}
+{% load static %}
+
+{% block content %}
+
+<h1>{{ country_code }}</h1>
+<p>
+    Rafting Trip.
+    <div class="col-lg-6">
+        <img class="img-fluid" src="{% static 'travel/img/CL.jpg' %}" alt="">
+	</div></br></br>
+</p>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'travel/country.html' %}
+{% load static %}
+
+{% block content %}
+
+<h1>{{ country_code }}</h1>
+<p>
+    Studied abroad in Zurich spring semester 2018.
+    <div class="col-lg-6">
+        <img class="img-fluid" src="{% static 'travel/img/CH_Zermatt_5.jpg' %}" alt="">
+	</div></br></br>
+    <div class="col-lg-6">
+        <img class="img-fluid" src="{% static 'travel/img/CH_SuperBowl.jpg' %}" alt="">
+	</div></br></br>
+    <div class="col-lg-6">
+        <img class="img-fluid" src="{% static 'travel/img/CH_Verbier_2.jpg' %}" alt="">
+	</div></br></br>
+    <div class="col-lg-6">
+        <img class="img-fluid" src="{% static 'travel/img/CH_Zermatt_Moguls.jpg' %}" alt="">
+	</div></br></br>
+    <div class="col-lg-6">
+        <img class="img-fluid" src="{% static 'travel/img/CH_Woko.jpg' %}" alt="">
+	</div></br></br>
+    <div class="col-lg-6">
+        <img class="img-fluid" src="{% static 'travel/img/CH_Springfest.jpg' %}" alt="">
+	</div></br></br>
+
+</p>
+
+{% endblock %}

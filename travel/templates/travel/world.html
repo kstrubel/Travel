@@ -1,0 +1,115 @@
+
+<!-- Styles -->
+<style>
+#chartdiv {
+  width: 100%;
+  height: 500px;
+}
+</style>
+
+<link href="https://www.amcharts.com/lib/3/ammap.css" rel="stylesheet">
+<!-- Resources -->
+<script src="https://www.amcharts.com/lib/3/ammap.js"></script>
+<script src="https://www.amcharts.com/lib/3/maps/js/worldLow.js"></script>
+<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+
+<!-- Chart code -->
+<script>
+AmCharts.makeChart( "chartdiv", {
+  /**
+   * this tells amCharts it's a map
+   */
+  "type": "map",
+
+  /**
+   * create data provider object
+   * map property is usually the same as the name of the map file.
+   * getAreasFromMap indicates that amMap should read all the areas available
+   * in the map data and treat them as they are included in your data provider.
+   * in case you don't set it to true, all the areas except listed in data
+   * provider will be treated as unlisted.
+   *
+   * Country codes: https://www.nationsonline.org/oneworld/country_code_list.htm
+   */
+  "dataProvider": {
+    "map": "worldLow",
+    "areas":[
+        { "id": "AR"},
+        { "id": "AT",
+            "description": "<a href = '/travel/AT/'>Skiing Austria (Spring 2018)</a>"},
+        { "id": "CA"},
+        { "id": "CH",
+            "description": "<a href = '/travel/CH/'>Studying Abroad (Spring 2018)</a>"},
+        { "id": "CL",
+            "description": "<a href = '/travel/CL/'>Adventures in Patagonia</a>"},
+        { "id": "CR",
+            "description": "<a href = '/travel/CR/'>Monkeys, Coffee, and Beaches</a>"},
+        { "id": "CZ",
+            "description": "<a href = '/travel/CZ/'>Living like a king in Eastern Europe</a>"},
+        { "id": "DE"},
+        { "id": "DO"},
+        { "id": "ES",
+            "description": "<a href = '/travel/ES/'>Skydiving, Clubbing & More (Spring 2018)</a>"},
+        { "id": "FR",
+            "description": "<a href = '/travel/FR/'>Paris (January 2018)</a>"},
+        { "id": "GB",
+            "description": "<a href = '/travel/GB/'>Couple of trips</a>"},
+        { "id": "GR",
+            "description": "<a href = '/travel/GR/'>Odyssey</a>"},
+        { "id": "HR"},
+        { "id": "HU",
+            "description": "<a href = '/travel/HU/'>Dad gets his MBA</a>"},
+        { "id": "IE",
+            "description": "<a href = '/travel/IE/'>Pub crawls & Cliffs (Spring 2018)</a>"},
+        { "id": "IL",
+            "description": "<a href = '/travel/IL/'>The Holy Land (January 2018)</a>"},
+        { "id": "IT",
+            "description": "<a href = '/travel/IT/'>Pope & Pizza (Spring 2018)</a>"},
+        { "id": "JM"},
+        { "id": "MA",
+            "description": "<a href = '/travel/MA/'>January 2018</a>"},
+        { "id": "MX"},
+        { "id": "NL",
+            "description": "<a href = '/travel/NL/'>Amsterdam (Spring 2018)</a>"},
+        { "id": "PR"},
+        { "id": "PT",
+            "description": "<a href = '/travel/PT/'>Chri stmas</a>"},
+        { "id": "SE",
+            "description": "<a href = '/travel/SE/'>Meeting the fam in Sweden (Spring 2018)</a>"},
+        { "id": "TW",
+            "description": "<a href = '/travel/TW/'>Spring Break Sophomore Year</a>"},
+        { "id": "US", "color": "#00CC00" },
+        { "id": "ZA", "color": "#CC0000" },
+        { "id": "TZ", "color": "#CC0000" },
+        { "id": "JP", "color": "#CC0000" },
+     ]
+  },
+
+  /**
+   * create areas settings
+   * autoZoom set to true means that the map will zoom-in when clicked on the area
+   * selectedColor indicates color of the clicked area.
+   */
+  "areasSettings": {
+    "autoZoom": true,
+    "selectedColor": "#0000CC"
+  },
+  "listeners": [{
+    "event": "descriptionClosed",
+    "method": function(ev) {
+      ev.chart.selectObject();
+    }
+  }],
+
+  /**
+   * let's say we want a small map to be displayed, so let's create it
+   */
+  "smallMap": {}
+} );
+</script>
+
+<!-- HTML -->
+<div id="chartdiv"></div>
+

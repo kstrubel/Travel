@@ -1,0 +1,32 @@
+{% extends 'travel/country.html' %}
+{% load static %}
+
+{% block content %}
+
+<h1>{{ country_code }}</h1>
+<p>
+    Spring Break 2018.
+    <div class="col-lg-6">
+        <img class="img-fluid" src="{% static 'travel/img/IT.jpg' %}" alt="">
+	</div></br></br>
+    <div class="col-lg-6">
+        <img class="img-fluid" src="{% static 'travel/img/IT_2.jpg' %}" alt="">
+	</div></br></br>
+    <div class="col-lg-6">
+        <img class="img-fluid" src="{% static 'travel/img/IT_Coliseum.jpg' %}" alt="">
+	</div></br></br>
+    <div class="col-lg-6">
+        <img class="img-fluid" src="{% static 'travel/img/IT_Vatican.jpg' %}" alt="">
+	</div></br></br>
+    <div class="col-lg-6">
+        <img class="img-fluid" src="{% static 'travel/img/IT_Pope.jpg' %}" alt="">
+	</div></br></br>
+    <div class="col-lg-6">
+        <img class="img-fluid" src="{% static 'travel/img/IT_Sunset.jpg' %}" alt="">
+	</div></br></br>
+    <div class="col-lg-6">
+        <img class="img-fluid" src="{% static 'travel/img/IT_Florence.jpg' %}" alt="">
+	</div></br></br>
+</p>
+
+{% endblock %}

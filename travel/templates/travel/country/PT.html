@@ -1,0 +1,17 @@
+{% extends 'travel/country.html' %}
+{% load static %}
+
+{% block content %}
+
+<h1>{{ country_code }}</h1>
+<p>
+    Spring Break.
+    <div class="col-lg-6">
+        <img class="img-fluid" src="{% static 'travel/img/PT.jpg' %}" alt="">
+	</div></br></br>
+    <div class="col-lg-6">
+        <img class="img-fluid" src="{% static 'travel/img/PT_2.jpg' %}" alt="">
+	</div></br></br>
+</p>
+
+{% endblock %}

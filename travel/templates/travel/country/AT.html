@@ -1,0 +1,14 @@
+{% extends 'travel/country.html' %}
+{% load static %}
+
+{% block content %}
+
+<h1>{{ country_code }}</h1>
+<p>
+    Spring 2018, drank a pitcher each then skied the hill... zero visibility that day.
+    <div class="col-lg-8">
+        <img class="img-fluid" src="{% static 'travel/img/AT.jpg' %}" alt="">
+	</div>
+</p>
+
+{% endblock %}
