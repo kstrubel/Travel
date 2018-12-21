@@ -9,6 +9,12 @@ def index(request):
     return render(request, 'travel/index.html', content)
 
 
+def about(request):
+
+    content = {}
+    return render(request, 'travel/about.html', content)
+
+
 def country(request, country_code):
     webpage = 'travel/country/' + country_code + '.html'
     content = {
