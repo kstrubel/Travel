@@ -1,0 +1,15 @@
+{% extends 'travel/country.html' %}
+{% load static %}
+
+{% block content %}
+
+<h1>{{ country_code }}</h1>
+<p>
+    Lolla at Chicago.
+    <div class="col-lg-6">
+        <img class="img-fluid" src="{% static 'travel/img/US_Lolla.JPG' %}" alt="">
+	</div></br></br>
+
+</p>
+
+{% endblock %}
