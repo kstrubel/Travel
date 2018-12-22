@@ -1,0 +1,23 @@
+{% extends 'travel/country.html' %}
+{% load static %}
+
+{% block content %}
+
+<h1>{{ country_code }} - Croatia</h1>
+<p>
+    Summer 2012.
+    <div class="col-lg-6">
+        <img class="img-fluid" src="{% static 'travel/img/HR_1.JPG' %}" alt="">
+	</div></br></br>
+    <div class="col-lg-6">
+        <img class="img-fluid" src="{% static 'travel/img/HR_2.JPG' %}" alt="">
+	</div></br></br>
+    <div class="col-lg-6">
+        <img class="img-fluid" src="{% static 'travel/img/HR_3.JPG' %}" alt="">
+	</div></br></br>
+    <div class="col-lg-6">
+        <img class="img-fluid" src="{% static 'travel/img/HR_4.JPG' %}" alt="">
+	</div></br></br>
+</p>
+
+{% endblock %}
