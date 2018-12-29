@@ -1,0 +1,24 @@
+{% extends 'travel/country.html' %}
+{% load static %}
+
+{% block content %}
+
+<h1>{{ country_code }} - Dominican Republic</h1>
+<p>
+    Sketchy Buses and Beautiful Beaches. <br><br>
+
+
+    <div class="col-lg-6">
+        <img class="img-fluid" src="{% static 'travel/img/DO_bus.jpg' %}" alt="">
+	</div></br></br>
+    <div class="col-lg-6">
+        <img class="img-fluid" src="{% static 'travel/img/DO_bus_.jpg' %}" alt="">
+	</div></br></br>
+    <div class="col-lg-6">
+        <img class="img-fluid" src="{% static 'travel/img/DO_writer.jpg' %}" alt="">
+	</div></br></br>
+
+
+</p>
+
+{% endblock %}
